@@ -1,0 +1,24 @@
+<web-app>
+	<servlet>
+		<servlet-name>firstone</servlet-name>
+		<servlet-class>myservlet</servlet-class>
+
+		<init-param>
+			<param-name>id1</param-name>
+			<param-value>poopmehard70</param-value>
+		</init-param>
+		<init-param>
+			<param-name>id2</param-name>
+			<param-value>poopmehard80</param-value>
+		</init-param>
+		<init-param>
+			<param-name>id3</param-name>
+			<param-value>poopmehard90</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>firstone</servlet-name>
+		 <url-pattern>/validation</url-pattern>
+	</servlet-mapping>
+
+</web-app>

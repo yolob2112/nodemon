@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn js</title>
+	<script type="text/javascript">
+		
+		var change=()=>{
+			document.querySelector("button").innerHTML="clicked on this button";
+		};
+		setTimeout(change,3000);  	//PHEW FINALLY
+	</script>
+</head>
+<body>
+	<p id>output is below this</p><br><br>
+  <p id="output">This is empty for time being</p>
+<button onclick="change()">on this button</button>
+<img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" width="500px" height="500px">
+
+<input type="text" id="textme" width="100px" height="100px" value="This is some sample text">
+
+<script>
+var sum=(x,y)=>x+y;
+
+var print=(printthis)=>{
+document.write(printthis+"<br>");
+};
+
+var food={
+	taste:"horrible",
+	who:"sudha",
+	menu:["dal","chapati"],
+	printchef:function(){
+		return this.who+" made "+this.menu+" which tasted "+this.taste;
+	}
+}
+print("hello there <br>");
+print("hello there");
+
+print(sum(2,3));
+
+  x=99.99;
+y=0.01;
+
+x=undefined;
+x=null;
+print(food.printchef());
+print("so today's menu was"+food.menu[0]);
+// null === undefined         // false
+// null == undefined  //true
+var res=typeof x;
+document.write(food.taste);
+document.write("<br>");
+document.write("this is food="+res+"<br>");
+
+//document.write(x+y);
+//console.log(x+y);
+  </script>
+
+
+
+
+  <script type="text/javascript">
+  	//	THIS IS GOING TO BE ON STRINGS
+  	var sum=(x,y)=>x+y;
+
+var print=(printthis)=>{
+document.write(printthis+"<br>");
+};
+print("this is from script 2");
+print("this is from script 2");
+
+var op=["nico",'robin',"pirates"];
+print(op.join("*"));
+op.push("chopper");
+print(op);
+print(op.shift());
+op.unshift("rayleigh","senpai");
+print(op);
+delete op;
+if(op==undefined)
+print("op is"+undefined);
+op.push("chill");
+print(op);
+
+//ARRAY SPLICING
+
+op.splice(1,2,"whatdhell");
+print(op);
+
+//ARRAY SLICING NOTE THE FUCKTIN DIFFERENCE
+
+var op1=op.slice(2);
+print(op1);
+
+//ARRAY SORTING
+
+op.sort();
+print("after sorting "+op);
+
+//MAX ELE IN ARRAY
+numbers=[22,11,443];
+print(typeof numbers[0]);
+if(typeof numbers[0] == "number")
+print("it's a number");
+print(Math.max.apply(null,numbers));  //null is the value of "this" keyword for the called function
+
+for (i in numbers){
+	print(i);
+}
+
+  </script>
+
+<script type="text/javascript">
+	
+//	THIS SHIT WILL BE FOR DATES
+
+var date=new Date();
+
+//Date objects are static. The computer time is ticking, but date objects, once created, are not.
+print(date.getFullYear());
+print(date.getMonth());
+print(date.getDay());
+document.write(date+"<br>");
+date=new Date("1996/12/21");
+document.write(date+"blha <br>");
+var d = new Date("2015-03-25Z12:00:00");
+document.write(d+"blha <br>");
+
+</script>
+<script type="text/javascript">
+		//THIS IS FOR DOM MODEL
+
+	var x=5;
+	x=~x;
+	document.write("x is"+x);
+	var str="the the good will the hunting";
+	var pat=/the/g;
+	var index=str.search(pat);
+	document.write(index+"<br>");
+	var url=document.URL;
+	document.write(url+"<br>");
+	
+</script>
+
+<style type="text/css">
+	.holyshit{
+		font-size: 100px;
+	}
+	.normalizeimg{
+		width:100px;
+		height: 100px
+	}
+
+</style>
+<script type="text/javascript">
+		// EVENTS LISTENERS AND DOM USING JS
+
+		var x=document.querySelector("button");
+		var fun=()=>x.classList.toggle("holyshit");
+		var interval_id=setInterval(fun,1000);
+		clearInterval(interval_id);  //	FOR CLEARING A INTERVAL
+
+		//CHANGING SRC OF IMG AFTER 5 SECS;
+
+		var img=document.querySelector("img");
+		fun=()=>{
+			img.setAttribute("src","#");
+			img.classList.add("normalizeimg");
+			img.parentElement.removeChild(img);  	//THE PARENT OF ELEMENT TO BE REMOVED SHOULD BE FOUND(DUH)
+		};
+		setTimeout(fun,5000);
+
+		var text=document.querySelector("#textme");
+		document.write(text.value);
+		//window.location.assign("https://www.reddit.com");
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

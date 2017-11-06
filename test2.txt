@@ -1,0 +1,137 @@
+Creating a directory-  Create a new directory in  C:\beans\demo\sunw\demo with a new folder name colors
+2)  Create a java source file
+3)  Compile the java source file
+4)  Create a manifest file colors.mft in the directory called as C:\beans\demo
+5)  Create a jar file- to create a jar file type the following command in the command prompt jar cfm ..\jars\colors.jar colors.mft sunw\demo\colors\*.class
+6)  Start the BDK
+7)  Check whether the colors bean is placed in toolbox or not.
+
+6.	Application – (story board)
+
+7.	Relevant Practice Exercise
+
+PROGRAM:
+package sunw.demo.colors;
+import java.awt.*;
+import java.awt.event.*;
+public class Colors extends Canvas
+{
+ transient private Color color;
+private boolean rectangular;
+public Colors()
+{
+ addMouseListener(new MouseAdapter(){
+public void mousePressed(MouseEvent me){
+change(); }
+});
+rectangular=false;
+setSize(100,100);
+change();
+}
+public boolean getRectangular()
+{
+ return rectangular;
+}
+ public void setRectangular(boolean flag)
+{
+ this.rectangular=flag;
+repaint();
+}
+public void change()
+{
+ color=randomColor();
+repaint();
+}
+ private Color randomColor()
+{
+ int r=(int)(255*Math.random());
+ int g=(int)(255*Math.random());
+ int b=(int)(255*Math.random());
+return new Color(r,g,b);
+}
+public void paint(Graphics g)
+{
+Dimension d=getSize();
+int h=d.height;
+int w=d.width;
+g.setColor(color);
+if(rectangular)
+{
+g.fillRect(0,0,w-1,h-1);
+}
+else
+{
+g.fillOval(0,0,w-1,h-1);
+} 
+}
+ 
+}
+
+
+
+
+
+
+
+Output: 
+ 
+
+
+ 
+RESULT:
+          Thus the colors bean is created successfully.
+Program 2:
+
+Visual Beans (program 2)
+Convert.java
+package sunw.demo.convert;
+import java.awt.*;
+import java.awt.event.*;
+public class convert extends Canvas
+{
+            private double dollars=0.0;
+            private double rupees=0.0;
+            private double dollarvalue=0.0;
+
+            public convert()
+            {
+            setSize(100,1000);
+            }
+            public double getDollars()
+            {
+            return dollars;
+            }
+            public void setDollars(double value)
+            {
+            this.dollars=value;
+            }
+            public void setRupees(double value)
+            {
+            this.rupees=value;
+            }
+            public double getRupees()
+            {
+            return rupees;
+            }
+            public void change()
+            {
+             dollarvalue= value();
+            repaint();
+            }
+            private double value()
+            {
+            return rupees*dollars;
+            }
+            public void paint(Graphics g)
+            {
+            g.setColor(Color.red);
+            g.drawString(String.valueOf(dollarvalue),10,10);
+            }
+}
+
+           
+Convert.mf
+Name: sunw/demo/convert/convert.class
+ Java-Bean: True ( press Enter)
+(Carriage return compulsory)
+

@@ -1,0 +1,2 @@
+Change port of DB
+Exec DBMS_XDB.SETHTTPPORT(3010);
